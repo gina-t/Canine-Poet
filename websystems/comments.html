@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="websystems.css" />
+    <title>Comments</title>
+  </head>
+  <body>
+    <div class="nav">
+      <a href="./index.html">Home</a>
+      <a href="./past.html">Past</a>
+      <a href="./future.html">Future</a>
+      <a href="./comments.html">Comments</a>
+    </div>
+    <section class="color-1">
+      <h1>Structure and Style</h1>
+      <p>Follows separation of concerns principle. HTML5 defines the structure and content. !DOCTYPE informs browser to interpret document as HTML5. The html element is the root element. The head element contains metadata and links to external resources.
+      </p>
+      <p>
+        CSS3 defines the layout and style of HTML content. The stylesheet is
+        linked in the head element using the link element. It enables consistent and reusable styling across multiple pages. The display property in CSS is crucial for controlling how elements are rendered, defining the type of box an element generates, impacting layout and visibility. 
+      </p>
+      <p>In this project I used tag to targets all instances of an HTML tag, class selectors to apply style to the attribute class, and inline styling.
+      </p>  
+    </section>
+
+    <section>
+      <table class="html-table">
+        <colgroup>
+          <col span="1" style="background-color:#8ACCD5">
+          <col span="1" style="background-color:#FBF3B9">
+          <col span="1" style="background-color:#B7B1F2">
+          <col span="1" style="background-color:#FFDCCC">
+        </colgroup>
+        <tr>
+          <th>Behaviour</th>
+          <th>HTML tags</th>
+          <th>Associated CSS</th>
+          <th>Important Attributes</th>
+        </tr>
+        <tr>
+          <td>Horizontal image scroll</td>
+          <td>img</td>
+          <td>.scroll-container</td>
+          <td>overflow: auto;</td>
+        </tr>
+        <tr>
+          <td>Organise content</td>
+          <td>table,tr,th,td</td>
+          <td>.html-table</td>
+          <td>width: 100%;</td>
+        </tr>
+        <tr>
+          <td>Color columns in table</td>
+          <td>colgroup, col</td>
+          <td>span, background-color</td>
+          <td>span="1"</td>
+        </tr>
+        <tr>
+          <td>Constrain content</td>
+          <td>section</td>
+          <td>.constrained</td>
+          <td>max-width: 800px</td>
+        </tr>
+      </table>
+    </section>
+  </body>
+</html>

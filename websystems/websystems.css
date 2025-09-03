@@ -1,0 +1,126 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  
+}
+body {
+  background-color: #84AE92;
+}
+
+@font-face {
+  font-family: 'Cupidus';
+  font-style: normal;
+  src: url('assets/Cupidus-Extralight.ttf') format('truetype');
+}
+
+body {
+  font-family: 'Cupidus', sans-serif;
+  color: #f5f4e6de;
+}
+
+h1,
+h2,
+h3 {
+  text-align: center;
+  margin: 0;
+  padding: 10px 0;
+}
+h1 {
+  font-size: 6vh;
+  padding: 25px;
+}
+h2 {
+  font-size: 4vh;
+}
+p {
+  text-align: left;
+  margin: 0 auto;
+  padding: 10px 0;
+  display: flex;
+  max-width: 800px;
+  font-size: 2vh;
+  line-height: 1.6;
+}
+pre {
+  font-size: 1.5vh;
+  display: block;
+ 
+}
+
+div.scroll-container {
+  overflow: auto;
+  white-space: nowrap;
+  padding: 20px;
+  text-align: center;
+}
+
+div.scroll-container img {
+  display: inline-block;
+  padding: 10px;
+  margin: 0;
+  border-radius: 20px;
+}
+
+.nav {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  background-color: #f5f4e6de;
+  padding: 15px; 
+}
+
+.nav a {
+  float: left;
+  color:  #111827;
+  text-align: justify;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.nav a:hover {
+  color: #4f46e5;
+}
+
+footer {
+  background-color: #f5f4e6de;
+  color:  #111827;
+  padding: 15px;
+}
+footer a {
+  color:  #111827;
+  
+}
+
+footer a:hover {
+  color: #4f46e5;
+}
+
+.constrained {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.html-table {
+  width: 60%;
+  text-align: center;
+  font-size: 2.0vh;
+  margin: auto;
+}
+.html-table th {
+  padding: 12px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.8vh;
+  color: #111827;
+}
+.html-table td {
+  padding: 15px;
+  text-align: center;
+  line-height: 1.5;
+  color: #111827;
+}
+
+
+
