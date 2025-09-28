@@ -2,21 +2,23 @@ html,
 body {
   margin: 0;
   padding: 0;
-  
 }
 body {
-  background-color: #84AE92;
+  background-color: #d9acf5;
 }
 
 @font-face {
   font-family: 'Cupidus';
   font-style: normal;
-  src: url('assets/Cupidus-Extralight.ttf') format('truetype');
+  src: url('./Cupidus-Extralight.ttf') format('truetype');
 }
 
 body {
-  font-family: 'Cupidus', sans-serif;
-  color: #f5f4e6de;
+  font-family: 'Cupidus', 'Helvetica', sans-serif;
+  color: #524a4e;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 }
 
 h1,
@@ -26,53 +28,66 @@ h3 {
   margin: 0;
   padding: 10px 0;
 }
+
 h1 {
   font-size: 6vh;
   padding: 25px;
 }
+
 h2 {
   font-size: 4vh;
+  padding: 10px 0;
 }
 p {
   text-align: left;
   margin: 0 auto;
   padding: 10px 0;
-  display: flex;
   max-width: 800px;
   font-size: 2vh;
   line-height: 1.6;
 }
+
 pre {
   font-size: 1.5vh;
-  display: block;
- 
+  max-width: 800px;
+  margin: 0;
 }
 
-div.scroll-container {
+#scroll-container {
   overflow: auto;
   white-space: nowrap;
   padding: 20px;
   text-align: center;
 }
 
-div.scroll-container img {
+#scroll-container img {
   display: inline-block;
-  padding: 10px;
+  padding: 5px;
   margin: 0;
   border-radius: 20px;
+}
+
+#scroll-container img:nth-child(n) {
+  transform: rotate(5deg);
+  z-index: 1;
+}
+
+#scroll-container img:nth-child(2n) {
+  transform: rotate(-5deg);
+  z-index: 5;
 }
 
 .nav {
   overflow: hidden;
   display: flex;
   justify-content: center;
-  background-color: #f5f4e6de;
-  padding: 15px; 
+  background-color: #ffcefe;
+  padding: 15px;
 }
 
 .nav a {
   float: left;
-  color:  #111827;
+  color: #1f2937;
   text-align: justify;
   padding: 14px 16px;
   text-decoration: none;
@@ -84,43 +99,207 @@ div.scroll-container img {
 }
 
 footer {
-  background-color: #f5f4e6de;
-  color:  #111827;
+  background-color: #ffcefe;
+  color: #323232;
   padding: 15px;
+  line-height: 1.6;
+  display: flex;
+  justify-content: center;
+  font-size: 14px;
 }
 footer a {
-  color:  #111827;
-  
+  color: #323232;
 }
 
 footer a:hover {
   color: #4f46e5;
 }
 
-.constrained {
+.wrapper {
   max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
+  text-align: justify;
 }
-.html-table {
+.wrapper img {
+  display: block;
+  margin: auto;
+  padding: 30px;
+}
+
+ul li {
+  font-size: 1.75vh;
+  line-height: 1.6;
+  list-style-type: disc;
+}
+ol li {
+  font-size: 1.75vh;
+  line-height: 1.6;
+}
+
+#html-table {
   width: 60%;
   text-align: center;
-  font-size: 2.0vh;
+  font-size: 2vh;
   margin: auto;
+  table-layout: fixed;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
 }
-.html-table th {
+#html-table th {
   padding: 12px;
   text-align: center;
-  font-weight: bold;
-  font-size: 1.8vh;
-  color: #111827;
+  color: #4f46e5;
+  font-weight: 400;
+  font-size: 2vh;
 }
-.html-table td {
+#html-table td {
   padding: 15px;
   text-align: center;
-  line-height: 1.5;
-  color: #111827;
+  line-height: 1.6;
+  color: #323232;
 }
 
+.code-highlight {
+  color: blue;
+}
 
+.table-highlight {
+  background: rgba(255, 255, 255, 0.1);
+}
 
+.bento-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto auto auto auto;
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.bento-box {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.bento-box h2 {
+  font-size: 3vh;
+  color: #4f46e5;
+}
+
+.bento-box-1 {
+  grid-area: 1 / 1; /* Row 1, Column 1 */
+}
+.bento-box-2 {
+  grid-area: 1 / 2;  /* Row 1, Column 2 */
+}
+.bento-box-3 {
+  grid-area: 2 / 1; /* Row 2, Column 1 */
+}
+.bento-box-4 {
+  grid-area: 2 / 2; /* Row 2, Column 2 */
+}
+.bento-box-5 {
+  grid-column: 1 / -1; /*spans width of bento-container*/
+  grid-row: 3;
+}
+.bento-box-6 {
+  grid-column: 1 / -1; /*spans width of bento-container*/
+  grid-row: 4;
+}
+
+ol.bento-box-5 {
+ padding-left: 50px;
+}
+
+blockquote {
+  line-height: 1.6;
+}
+
+@media screen and (max-width: 400px) {
+  .nav {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .nav a {
+    padding: 8px 12px;
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 4vh;
+    padding: 15px;
+  }
+
+  h2 {
+    font-size: 3vh;
+  }
+
+  p {
+    font-size: 1.8vh;
+    max-width: 95%;
+    padding: 8px 20px;
+  }
+
+  #html-table {
+    width: 95%;
+    font-size: 1.4vh;
+  }
+
+  #html-table th,
+  #html-table td {
+    padding: 8px;
+  }
+  .wrapper {
+    max-width: 90%;
+    padding: 0 10px;
+  }
+  #scroll-container {
+    overflow: visible;
+    white-space: normal;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 5px;
+    padding: 5px;
+  }
+
+  #scroll-container img {
+    width: 60%;
+    height: auto;
+    transform: none !important;
+    margin: 0 auto;
+  }
+
+  footer {
+    font-size: 12px;
+    padding: 20px;
+  }
+
+  .bento-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+    gap: 15px;
+  }
+
+  .bento-box-1 {
+    grid-area: 1 / 1;
+  }
+  .bento-box-2 {
+    grid-area: 2 / 1;
+  }
+  .bento-box-3 {
+    grid-area: 3 / 1;
+  }
+  .bento-box-4 {
+    grid-area: 4 / 1;
+  }
+  .bento-box-5 {
+    grid-area: 5 / 1;
+  }
+  .bento-box-6 {
+    grid-area: 6 / 1;
+  }
+}

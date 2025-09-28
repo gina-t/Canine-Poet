@@ -6,64 +6,327 @@
     <link rel="stylesheet" href="websystems.css" />
     <title>Comments</title>
   </head>
+
   <body>
-    <div class="nav">
-      <a href="./index.html">Home</a>
-      <a href="./past.html">Past</a>
-      <a href="./future.html">Future</a>
-      <a href="./comments.html">Comments</a>
-    </div>
-    <section class="color-1">
-      <h1>Structure and Style</h1>
-      <p>Follows separation of concerns principle. HTML5 defines the structure and content. !DOCTYPE informs browser to interpret document as HTML5. The html element is the root element. The head element contains metadata and links to external resources.
-      </p>
-      <p>
-        CSS3 defines the layout and style of HTML content. The stylesheet is
-        linked in the head element using the link element. It enables consistent and reusable styling across multiple pages. The display property in CSS is crucial for controlling how elements are rendered, defining the type of box an element generates, impacting layout and visibility. 
-      </p>
-      <p>In this project I used tag to targets all instances of an HTML tag, class selectors to apply style to the attribute class, and inline styling.
-      </p>  
-    </section>
+    <header>
+      <nav class="nav">
+        <a href="./index.html">Home</a>
+        <a href="./past.html">Past</a>
+        <a href="./future.html">Future</a>
+        <a href="./comments.html">Comments</a>
+      </nav>
+    </header>
 
     <section>
-      <table class="html-table">
+      <div class="wrapper">
+        <h1>Structure and Style</h1>
+      </div>
+    </section>
+    <section>
+       <!-- bento-container -->
+      <div class="bento-container">
+        <!-- bento-box-1 -->
+        <div class="bento-box bento-box-1">
+          <h2>Declarative Languages</h2>
+          <p>
+            It was important to me to understand that HTML5 and CSS3 are declarative
+            languages, and that my choice of browser engine interacts with the .html
+            and .css files I created to render the content. Essentially, my files
+            describe what is to be displayed, and the browser engine determines how
+            to achieve it. Further, my four <em>HTML files</em> (index, past,
+            future, comments) declare the document <em>structure and content</em>, and my
+            <em>CSS file</em> (websystems.css) declares the <em>style and layout</em> of the
+            webpages.
+          </p>
+          <p>
+            I used <a href="https://www.w3schools.com/">W3Schools</a> as a
+            resource to develop my understanding of HTML/CSS and grasped that I can
+            build a beautiful website using these tools only.
+          </p>
+        </div>
+        <!-- bento-box-2 -->  
+        <div class="bento-box bento-box-2">
+          <h2>Browser Engine Flow</h2>
+          <p>
+            For overall context, I delved into how browser engines such as Blink for Chrome,
+            and WebKit for Safari implement HTML and CSS and created the following
+            flowchart using <a href="https://www.canva.com/">Canva</a> to demonstrate the process.
+          </p>
+          <img src="./flowchart.png" alt="flowchart diagram" width="100%" style="max-width: 400px; height: auto;" />
+        </div>
+        <!-- bento-box-3 -->
+        <div class="bento-box bento-box-3">
+          <h2>Separation of Concerns</h2>
+          <p>
+            Throughout my coding journey I've encountered a fundamental programming
+            paradigm, the "separation of concerns principle", that divides responsibilities and indeed this principle applies to HTML5 structure and CSS3 style & layout.
+          </p>
+          <p>
+            The DOCTYPE declaration
+            <span class="code-highlight">&lt;!DOCTYPE html&gt;</span> at the start
+            of my index.html file informs the browser to interpret the document as
+            HTML5. The <span class="code-highlight">&lt;html&gt;</span> element
+            serves as the root container, containing the
+            <span class="code-highlight">&lt;head&gt;</span> element with
+            metadata, links to external resources, and the webpage title <a href="./index.html">Canine Poet</a>.
+          </p>
+          <p>
+            The <span class="code-highlight">&lt;body&gt;</span> element contains the main content, structurally organised into <span class="code-highlight">&lt;header&gt;</span>, <span class="code-highlight">&lt;section&gt;</span> and <span class="code-highlight">&lt;footer&gt;</span>. Initially I started with a .wrapper class to organise the content, but after writing the comments.html page, I found that the content layout was in one block and difficult to read. I therefore introduced an additional grid layout using <span class="code-highlight">.bento-container</span> and <span class="code-highlight">.bento-box</span> and the layout improved significantly. I added a transparent background to the <span class="code-highlight">.bento-box</span> and this allowed the underlying colour of the body to display but with a muted tone. I am pleased with the result.
+          </p>
+        </div>
+        <!-- bento-box-4 -->  
+        <div class="bento-box bento-box-4">
+          <h2>CSS Cascade</h2>
+          <p>
+            It was important for me to understand that "cascading" in CSS3 refers to
+            the hierarchy and flow of styles, encompassing how multiple style rules
+            are applied, and how more specific style rules are given precedence over
+            less specific style rules.
+          </p>
+          <p>
+            In my external stylesheet "websystems.css", linked through the <span class="code-highlight">&lt;link&gt;</span> element in the head tag, the order of priority from lowest to highest is outlined below:
+          </p>
+        </div>
+        <!-- bento-box-5 -->
+        <ol class="bento-box bento-box-5">
+          <h2>CSS Selectors</h2>
+          <li>
+            Element selectors for eg.
+            <span class="code-highlight">body { background-color: #d9acf5; }</span>
+          </li>
+          <li>
+            Class selectors prefixed with a dot (.) for eg.
+            <span class="code-highlight">.bento-box { display: grid; grid-template-columns: 2fr 1fr; grid-template-rows: auto auto auto auto; }</span>
+          </li>
+          <li>
+            ID selectors prefixed with a hash (#) for eg.
+            <span class="code-highlight">#html-table { width: 60%; text-align: center; font-size: 2vh; margin: auto; table-layout: fixed; }</span>
+          </li>
+          <li>
+            Inline selectors for CSS written directly into an HTML element's
+            <span class="code-highlight">&lt;style&gt;</span> attribute, but not permitted in this project
+          </li>
+          <li>
+            <span class="code-highlight">!important</span> declarations override
+            above rules for eg. <span class="code-highlight"> transform: none !important;</span>
+          </li>
+        </ol>
+        <!-- bento-box-6 -->
+        <div class="bento-box bento-box-6">
+          <p>
+            In this project I used element selectors to target all instances of an
+            HTML tag, class selectors to apply reusable styles to multiple elements,
+            ID selectors to target unique elements that appear only once per page,
+            and additional CSS classes to style individual elements with specific
+            needs.
+          </p>
+          <p>
+            From a personal perspective I endeavour to ensure my web apps are mobile responsive and as such I used the <span class="code-highlight">@media screen and (max-width: 400px)</span> css rule to create a responsive layout for screens smaller than 400px, about the width of an iPhone 12 Pro.
+          </p>
+        </div> 
+      </div>
+    </section>
+     <!-- table -->
+    <section>
+      <table id="html-table">
         <colgroup>
-          <col span="1" style="background-color:#8ACCD5">
-          <col span="1" style="background-color:#FBF3B9">
-          <col span="1" style="background-color:#B7B1F2">
-          <col span="1" style="background-color:#FFDCCC">
+          <col span="1" class="table-highlight" />
+          <col span="1" class="table-highlight" />
+          <col span="1" class="table-highlight" />
+          <col span="1" class="table-highlight" />
         </colgroup>
         <tr>
-          <th>Behaviour</th>
-          <th>HTML tags</th>
-          <th>Associated CSS</th>
-          <th>Important Attributes</th>
+          <th>Purpose</th>
+          <th>Targeted HTML Tags</th>
+          <th>Type of Selector</th>
+          <th>Key CSS Attributes</th>
         </tr>
         <tr>
-          <td>Horizontal image scroll</td>
-          <td>img</td>
-          <td>.scroll-container</td>
-          <td>overflow: auto;</td>
+          <td><i>Navigation between pages</i></td>
+          <td> &lt;a&gt; within &lt;nav&gt; </td>
+          <td>class selector .nav a and descendant selector with pseudoclass .nav a:hover </td>
+          <td><span class="code-highlight">{ color: #4f46e5; }</span></td>
         </tr>
         <tr>
-          <td>Organise content</td>
-          <td>table,tr,th,td</td>
-          <td>.html-table</td>
-          <td>width: 100%;</td>
+          <td><i>Navigation layout</i></td>
+          <td>&lt;nav&gt;</td>
+          <td>class selector .nav</td>
+          <td><span class="code-highlight">{ display: flex; }</span> For a one-dimensional layout with nav items arranged in a row
+          <span class="code-highlight">{ justify-content: center; }</span> Aligns the flex items at the center of the container
+          </td> 
         </tr>
         <tr>
-          <td>Color columns in table</td>
-          <td>colgroup, col</td>
-          <td>span, background-color</td>
-          <td>span="1"</td>
+          <td><i>Horizontal image scroll</i></td>
+          <td>
+            &lt;div&gt; container with &lt;img&gt; to embed image in HTML page
+            with 2 required attributes: src, alt, and 2 recommended attributes:
+            width, height
+          </td>
+          <td>id selector #scroll-container</td>
+          <td>
+            <span class="code-highlight">{ overflow: auto; }</span> Creates a horizontal scroll bar when images extend beyond container width 
+            <span class="code-highlight">{ white-space: nowrap; }</span> Prevents
+            content from wrapping to new line
+          </td>
         </tr>
         <tr>
-          <td>Constrain content</td>
-          <td>section</td>
-          <td>.constrained</td>
-          <td>max-width: 800px</td>
+          <td><i>Maintain formatting of poems as typed</i></td>
+          <td>&lt;pre&gt;</td>
+          <td>element selector</td>
+          <td>
+            Preserves white space and line breaks automatically
+          </td>
+        </tr>
+
+        <tr>
+          <td><i>Organise data into a table</i></td>
+          <td>&lt;table&gt; &lt;tr&gt; &lt;th&gt; &lt;td&gt;</td>
+          <td>id selector #html-table</td>
+          <td>
+            <span class="code-highlight">{ width: 60%; }</span> Constrains width of container <span class="code-highlight">{ line-height: 1.6; }</span> Increases space between lines to improve readability 
+          </td>
+        </tr>
+        
+        <tr>
+          <td><i>Control width of content</i></td>
+          <td>&lt;div&gt;</td>
+          <td>class selector .wrapper</td>
+          <td>
+            <span class="code-highlight">{ max-width: 800px; }</span> Sets maximum width of container. If content is larger than maximum width, it will automatically change the height of the element
+          </td>
+        </tr>
+        <tr>
+          <td><i>Centre content within container</i></td>
+          <td>&lt;div&gt;</td>
+          <td>class selector .wrapper</td>
+          <td>
+            <span class="code-highlight">{ margin: 0 auto; }</span> Sets left and right margins of content to auto calculated by browser
+            <span class="code-highlight">{ text-align: justify; }</span> Stretches
+            the lines so that each line has equal width
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <i>Body occupies 100% of viewport height and header and footer
+              correctly positioned</i>
+          </td>
+          <td>&lt;body&gt;</td>
+          <td>element selector</td>
+          <td>
+            <span class="code-highlight">{ min-height: 100vh; }</span> 100% of viewport 
+            <span class="code-highlight">{ display: grid; }</span> Body displays
+            as a two-dimensional layout, with rows and columns.
+            <span class="code-highlight">grid-template-rows: auto 1fr auto;
+            </span> Defines 3 horizontal rows for overall page layout
+          </td>
+        </tr>
+        <tr>
+          <td><i>Define a padding (space) between text and border</i></td>
+          <td>&lt;p&gt; &lt;h1&gt; &lt;h2&gt; &lt;h3&gt; &lt;footer&gt;</td>
+          <td>element selector</td>
+          <td>
+            <span class="code-highlight">{ padding: 10px 0; }</span> Denotes 10px
+            top and bottom and 0 left and right
+          </td>
+        </tr>
+        <tr>
+          <td><i>Define a margin (space) outside border</i></td>
+          <td>&lt;p&gt;</td>
+          <td>element selector</td>
+          <td>
+            <span class="code-highlight">{ margin: 0 auto; }</span> Denotes top and
+            bottom margins are 0, and left and right margins are equal,
+            centering the element within its parent container
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <i>Hyperlinks to navigate between pages and navigate to different
+              documents</i></td>
+          <td>
+            &lt;a&gt; with href attribute to indicate link's destination
+            specified by a relative URL or absolute URL
+          </td>
+          <td>descendant selector with pseudo-class</td>
+          <td>
+            <span class="code-highlight">:hover</span> pseudo-class changes link
+            colour on mouse hover <span class="code-highlight">a:hover { color: #4f46e5; }</span>
+          </td>
+        </tr>
+        <tr>
+          <td><i>Link to an email address</i></td>
+          <td>
+            &lt;a&gt; use mailto: inside the href attribute to create a link
+            that opens the user's email program
+          </td>
+          <td>descendant selector with pseudo-class</td>
+          <td>
+            <span class="code-highlight">:hover</span> pseudo-class changes link
+            colour on mouse hover <span class="code-highlight">a:hover { color: #4f46e5; }</span>
+          </td>
+        </tr>  
+        <tr>
+          <td><i>blockquote</i></td>
+          <td>&lt;blockquote&gt; Specifies a section that is quoted from another source, and contains a metadata cite attribute to reference the source url, for browsers, and assistive technologies</td>
+          <td>element selector</td>
+          <td>
+            <span class="code-highlight">{ line-height: 1.6; }</span> Sets the vertical spacing between lines of text
+        </td>
+        </tr>
+        <tr>
+          <td><i>Emphasise text</i></td>
+          <td>&lt;em&gt; Typically displayed in italic. A screen reader will pronounce the words <em> with an emphasis, using verbal stress.</em></td> 
+          <td>element selector</td>
+          <td></td>
         </tr>
       </table>
     </section>
+      
+    <section>
+      <div class="wrapper">
+        <h2>Graphic Design</h2>
+        <p>
+          I created <em>Madame Tao</em> as my alias and literary persona. I made design choices that enhance the original poems written by me, and used the <span class="code-highlight">&lt;pre&gt;</span> tag to preserve whitespace in the poems and emulate a poetry website.
+        </p>
+        <p>
+          I selected a harmonious pastel colour scheme: <span class="code-highlight">#D9ACF5</span> for the body background, <span class="code-highlight">#FFCEFE</span> to distinguish <span class="code-highlight">&lt;nav&gt;</span> and <span class="code-highlight">&lt;footer&gt;</span> elements, and <span class="code-highlight">#4f46e5</span> for hover states and accents. I used a transparent background <span class="code-highlight">rgba(255, 255, 255, 0.1);</span> for the .bento-box to allow the colour of the body to display through a frosted appearance, whilst maintaining sufficient contrast for readability.
+        </p>
+        <p>
+          The primary typeface is Cupidus-Extralight, an elegant custom font that I purchased. I implemented a font-stack with Helvetica and sans-serif as fallbacks to ensure readability across different devices. I used viewport units (vh) for responsive scaling of font-size, with clear hierarchy: 
+          <ul>
+            <li>6vh for h1 tags</li>
+            <li>4vh for h2 tags</li>
+            <li>2vh for p tags</li>
+            <li>modified for small screen</li>
+          </ul>  
+        </p>
+        <p>
+          As mentioned earlier I started with an element selector to target <span class="code-highlight">&lt;body&gt;</span> with the attributes <span class="code-highlight">display: grid; grid-template-rows: auto 1fr auto;</span> to create 3 rows and a sticky header and footer. I progressed to a simple <span class="code-highlight">.wrapper</span> class to constrain the content, with <span class="code-highlight">max-width: 800px;</span> for optimal reading line length, but found that the content in the comments.html page was too extensive and complex to work with this layout approach. I therefore added a more sophisticated grid pattern using <span class="code-highlight">.bento-container</span> with two columns (2fr 1fr) and four auto-sizing rows, within which I placed my bento-boxes. Each bento-box was styled with a transparent background, a border, and curved corners. I subsequently re-used the bento-boxes throughout the webpages because it looked so good. Within the @media screen and (max-width: 400px), I modified the .bento-container to one column and revised the .bento-box grid-area positioning to ensure readability for iPhone 12 Pro. The horizontal image gallery uses a scrollable container that allows users to browse photos while maintaining page flow.
+        </p>
+      </div>    
+    </section>
+
+    <section>
+      <div class="wrapper">
+        <h2>Accessibility and Usability</h2>
+        <p>
+          My images include correct <span class="code-highlight">alt</span> attributes for screen reader accessibility. The photo gallery images use <span class="code-highlight">alt="dog"</span> providing descriptive content for visually impaired users. The flowchart image uses <span class="code-highlight">alt="flowchart diagram"</span> clearly identifying its purpose. These descriptions ensure the website content remains meaningful when images cannot be displayed or accessed.
+        </p>
+        
+        <p>
+          When CSS is disabled (testable using Firefox's Web Developer Tools), the website maintains full functionality and readability. The semantic HTML structure ensures content flows logically: navigation links remain functional, headings provide clear hierarchy, paragraphs maintain readability, and the table presents data in an organised format. The use of semantic elements like <span class="code-highlight">&lt;nav&gt;</span>, <span class="code-highlight">&lt;section&gt;</span>, and <span class="code-highlight">&lt;footer&gt;</span> provides meaning even without visual styling. 
+        </p>
+      </div>
+    </section>
+
+    <footer>
+      <div class="wrapper">
+        <h3>
+          Madame Tao is open to new opportunities and collaborations. If you are
+          interested in working with her, please feel free to reach out to
+          <a href="mailto:taoamstaff@gmail.com">taoamstaff@gmail.com</a>
+        </h3>
+      </div>
+    </footer>
   </body>
 </html>
