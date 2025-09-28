@@ -40,17 +40,17 @@ No build is required.
 
 Link to deployed app url:
 
-[portfolio](http://www.websystems.net.au/student/GeorgiaTsanaktsidis4212592075/websytems/index.html)
+[canine-poet](http://www.websystems.net.au/student/GeorgiaTsanaktsidis4212592075/websytems/index.html)
 
 Screenshots of app demonstrating functionality:
 
 ### future page
 
-![future page](./screenshot-1.png)
+![future page](websystems/screenshot-1.png)
 
 ### comments page
 
-![comments page](./screenshot-2.png)
+![comments page](websystems/screenshot-2.png)
 
 ## License
 
