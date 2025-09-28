@@ -40,7 +40,7 @@ No build is required.
 
 Link to deployed app url:
 
-[canine-poet](http://www.websystems.net.au/student/GeorgiaTsanaktsidis4212592075/websytems/index.html)
+[canine-poet](http://www.websystems.net.au/student/GeorgiaTsanaktsidis4212592075/websystems/index.html)
 
 Screenshots of app demonstrating functionality:
 
